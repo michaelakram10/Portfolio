@@ -1,138 +1,473 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <script src="https://kit.fontawesome.com/317ffc7e8e.js" crossorigin="anonymous"></script>
-    <link rel="shortcut icon" href="images/WhatsApp Image 2024-06-06 at 10.55.49_ac9b9248.jpg"/>
-    <link rel="stylesheet" href="style.css">
-    <title>Michael Akram</title>
-</head>
-<body>
-
-    <header>
-        <a href="#" class="logo">Michael Akram</a>
-        <nav class="navigation">
-            <a href="#services">Services</a>
-            <a href="#projects">Projects</a>
-            <a href="#contact">Contact</a>
-        </nav>
-    </header>
-
-
-    <section class="main">
-        <div>
-            <h2>Hello, I'm Michael<br><span>Comm. Engineer</span></h2>
-            <h3>Helwan National Uni.</h3>
-            <a href="#projects" class="main-btn">View my work</a>
-            <a href="https://pdflink.to/a5bca46b/" class="main-btn">View my CV</a>
-            <div class="social-icons">
-                <a href="https://www.linkedin.com/in/michael-akram-b64041161/" target="_blank"><i class="fab fa-linkedin"></i></a>
-                <a href="https://www.instagram.com/michaelakramn/" target="_blank"><i class="fab fa-instagram"></i></a>
-                <a href="https://www.facebook.com/michael.akram.39" target="_blank"><i class="fab fa-facebook"></i></a>
-            </div>
-        </div>
-    </section>
-
-    <section class="cards" id="services">
-        <h2 class="title">Services</h2>
-        <div class="content">
-            <div class="card">
-                <div class="icon">
-                    <i class="fa-solid fa-robot"></i>
-                </div>
-                <div class="info">
-                    <h3>Programming</h3>
-                    <p>Research and write scripts for different topics that can then be directly recorded for video production</p>
-                </div>
-            </div>
-            <div class="card">
-                <div class="icon">
-                    <i class="fa-solid fa-microchip"></i>
-                </div>
-                <div class="info">
-                    <h3>Electronics Design</h3>
-                    <p>Record and shoot videos taking into consideration proper settings, followed by production & post-production work</p>
-                </div>
-            </div>
-            <div class="card">
-                <div class="icon">
-                    <i class="fa-solid fa-car-rear"></i>
-                </div>
-                <div class="info">
-                    <h3>Autonomous Cars</h3>
-                    <p>Develop complete curriculums for various technical topics to produce digital transformative courses</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="projects" id="projects">
-        <h2 class="title">Projects</h2>
-        <div class="content">
-            <div class="project-card">
-                <div class="project-image">
-                    <img src="images/New-YouTube-logo (1).jpg" />
-                </div>
-                <div class="project-info">
-                    <p class="project-category">Programming</p>
-                    <strong class="project-title">
-                        <span>Youtube Website</span>
-                        <a href="https://github.com/michaelakram10/Youtube" target="_blank" class="more-details">More details</a>
-                    </strong>
-                </div>
-            </div>
-            <div class="project-card">
-                <div class="project-image">
-                    <img src="" />
-                </div>
-                <div class="project-info">
-                    <p class="project-category">Script Writing & Video Production</p>
-                    <strong class="project-title">
-                        <span>Dev Books</span>
-                        <a href="#" class="more-details">More details</a>
-                    </strong>
-                </div>
-            </div>
-            
-            
-        </div>
-    </section>
-
-    <section class="cards contact" id="contact">
-        <h2 class="title">Let's work together</h2>
-        <div class="content">
-            <div class="card">
-                <div class="icon">
-                    <i class="fas fa-phone"></i>
-                </div>
-                <div class="info">
-                    <h3>Phone</h3>
-                    <p>+201289390073</p>
-                </div>
-            </div>
-            <div class="card">
-                <div class="icon">
-                    <i class="fas fa-envelope"></i>
-                </div>
-                <div class="info">
-                    <h3>Email</h3>
-                    <p>akrammichael10@gmail.com</p>
-                </div>
-            </div>
-        </div>
-    </section>
+    <title>Michael Akram | AI Engineer Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     
-    <footer class="footer">
-        <p class="footer-title">Copyrights @ <span>Michael Akram</span></p>
-        <div class="social-icons">
-            <a href="https://www.linkedin.com/in/michael-akram-b64041161/" target="_blank"><i class="fab fa-linkedin"></i></a>
-            <a href="https://www.instagram.com/michaelakramn/" target="_blank"><i class="fab fa-instagram"></i></a>
-            <a href="https://www.facebook.com/michael.akram.39" target="_blank"><i class="fab fa-facebook"></i></a>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                fontFamily: {
+                    sans: ['Poppins', 'sans-serif'],
+                },
+                extend: {
+                    colors: {
+                        primary: '#3B82F6', // Blue
+                        secondary: '#1E293B', // Dark Blue/Slate
+                        accent: '#10B981', // Emerald Green
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #888;
+            border-radius: 5px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
+        
+        .blob {
+            position: absolute;
+            filter: blur(40px);
+            z-index: -1;
+            opacity: 0.4;
+            animation: move 10s infinite alternate;
+        }
+        @keyframes move {
+            from { transform: translate(0, 0) scale(1); }
+            to { transform: translate(20px, -20px) scale(1.1); }
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800 dark:bg-slate-900 dark:text-gray-100 transition-colors duration-300">
+
+    <nav class="fixed w-full z-50 bg-white/80 dark:bg-slate-900/90 backdrop-blur-md shadow-sm transition-all duration-300">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-primary dark:text-white">Michael<span class="text-accent">.AI</span></a>
+            
+            <div class="hidden md:flex space-x-8">
+                <a href="#home" class="hover:text-primary transition">Home</a>
+                <a href="#about" class="hover:text-primary transition">About</a>
+                <a href="#experience" class="hover:text-primary transition">Experience</a>
+                <a href="#projects" class="hover:text-primary transition">Projects</a>
+                <a href="#skills" class="hover:text-primary transition">Skills</a>
+                <a href="#contact" class="hover:text-primary transition">Contact</a>
+            </div>
+
+            <button id="theme-toggle" class="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-slate-700 transition">
+                <i class="fas fa-moon dark:hidden"></i>
+                <i class="fas fa-sun hidden dark:inline text-yellow-400"></i>
+            </button>
+
+            <button id="mobile-menu-btn" class="md:hidden p-2">
+                <i class="fas fa-bars text-xl"></i>
+            </button>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-white dark:bg-slate-900 border-t dark:border-slate-800">
+            <a href="#home" class="block py-3 px-6 hover:bg-gray-100 dark:hover:bg-slate-800">Home</a>
+            <a href="#about" class="block py-3 px-6 hover:bg-gray-100 dark:hover:bg-slate-800">About</a>
+            <a href="#experience" class="block py-3 px-6 hover:bg-gray-100 dark:hover:bg-slate-800">Experience</a>
+            <a href="#projects" class="block py-3 px-6 hover:bg-gray-100 dark:hover:bg-slate-800">Projects</a>
+            <a href="#contact" class="block py-3 px-6 hover:bg-gray-100 dark:hover:bg-slate-800">Contact</a>
+        </div>
+    </nav>
+
+    <section id="home" class="min-h-screen flex items-center justify-center relative overflow-hidden pt-20">
+        <div class="blob bg-purple-400 w-64 h-64 rounded-full top-20 left-20"></div>
+        <div class="blob bg-blue-400 w-72 h-72 rounded-full bottom-20 right-20 animation-delay-2000"></div>
+
+        <div class="container mx-auto px-6 text-center z-10">
+            <div class="mb-4 inline-block px-4 py-1 rounded-full bg-blue-100 dark:bg-blue-900 text-primary dark:text-blue-200 text-sm font-semibold">
+                Available for Work
+            </div>
+            <h1 class="text-5xl md:text-7xl font-bold mb-6">
+                Hi, I'm <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent">Michael Akram</span>
+            </h1>
+            <p class="text-xl md:text-2xl text-gray-600 dark:text-gray-300 mb-8 h-8">
+                I am a <span id="typewriter" class="font-semibold text-primary"></span>
+            </p>
+            <p class="max-w-2xl mx-auto text-gray-500 dark:text-gray-400 mb-10 leading-relaxed">
+                Specializing in Generative AI, NLP, and Full Stack Development. I build scalable, transformer-based models and integrate them into production systems.
+            </p>
+            <div class="flex flex-col md:flex-row gap-4 justify-center">
+                <a href="#contact" class="px-8 py-3 bg-primary hover:bg-blue-700 text-white rounded-lg font-semibold transition shadow-lg hover:shadow-blue-500/30">
+                    Get in Touch
+                </a>
+                <a href="#projects" class="px-8 py-3 border border-gray-300 dark:border-gray-600 hover:border-primary hover:text-primary rounded-lg font-semibold transition">
+                    View Projects
+                </a>
+            </div>
+            
+            <div class="mt-12 flex justify-center gap-6 text-2xl text-gray-500 dark:text-gray-400">
+                <a href="https://github.com/michaelakram10" target="_blank" class="hover:text-black dark:hover:text-white transition"><i class="fab fa-github"></i></a>
+                <a href="https://linkedin.com/in/michael-akram-n/" target="_blank" class="hover:text-blue-600 transition"><i class="fab fa-linkedin"></i></a>
+                <a href="mailto:akrammichael10@gmail.com" class="hover:text-red-500 transition"><i class="fas fa-envelope"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="py-20 bg-white dark:bg-slate-800">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row gap-12 items-center">
+                <div class="md:w-1/2 relative">
+                    <div class="w-full h-80 bg-gradient-to-tr from-blue-500 to-purple-600 rounded-2xl rotate-3 absolute -z-10 opacity-70"></div>
+                    <div class="w-full h-80 bg-gray-200 dark:bg-slate-700 rounded-2xl flex items-center justify-center text-gray-400 shadow-xl overflow-hidden">
+                       <i class="fas fa-user-astronaut text-6xl"></i>
+                       </div>
+                </div>
+                <div class="md:w-1/2">
+                    <h2 class="text-3xl font-bold mb-6 border-l-4 border-primary pl-4">About Me</h2>
+                    <p class="text-gray-600 dark:text-gray-300 mb-4 leading-relaxed">
+                        I am an AI & Machine Learning Engineer with a BA in Smart Systems Engineering from Helwan National University (GPA 3.58). My passion lies in bridging the gap between advanced research and practical application.
+                    </p>
+                    <p class="text-gray-600 dark:text-gray-300 mb-6 leading-relaxed">
+                        With hands-on experience in NLP, Deep Learning, and Full Stack Web Development, I specialize in designing and deploying transformer-based models and MLOps workflows using AWS and Docker.
+                    </p>
+                    
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="p-4 bg-gray-50 dark:bg-slate-700 rounded-lg">
+                            <h3 class="font-bold text-lg mb-1">Education</h3>
+                            <p class="text-sm text-gray-500 dark:text-gray-400">BA in Smart Systems Engineering</p>
+                            <p class="text-xs text-primary">Helwan National University</p>
+                        </div>
+                        <div class="p-4 bg-gray-50 dark:bg-slate-700 rounded-lg">
+                            <h3 class="font-bold text-lg mb-1">Location</h3>
+                            <p class="text-sm text-gray-500 dark:text-gray-400">Manial, Cairo, Egypt</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience" class="py-20">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold mb-12 text-center">Work Experience</h2>
+            
+            <div class="relative border-l-2 border-gray-200 dark:border-slate-700 ml-4 md:ml-12 space-y-12">
+                
+                <div class="relative pl-8 md:pl-12 group">
+                    <span class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-primary ring-4 ring-white dark:ring-slate-900"></span>
+                    <div class="bg-white dark:bg-slate-800 p-6 rounded-xl shadow-md hover:shadow-xl transition border border-gray-100 dark:border-slate-700">
+                        <div class="flex flex-col md:flex-row md:justify-between mb-2">
+                            <h3 class="text-xl font-bold text-gray-800 dark:text-white">Generative AI Engineer Intern</h3>
+                            <span class="text-sm text-primary font-semibold bg-blue-50 dark:bg-slate-900 px-3 py-1 rounded-full w-fit">Dec 2025 - Present</span>
+                        </div>
+                        <p class="text-gray-500 dark:text-gray-400 mb-4">Digital Egypt Pioneers Initiative (DEPI) | Hybrid</p>
+                        <ul class="list-disc list-outside ml-4 text-gray-600 dark:text-gray-300 space-y-2">
+                            <li>Developing NLP and Generative AI models for text summarization and understanding.</li>
+                            <li>Implementing neural architectures to improve model coherence and response accuracy.</li>
+                            <li>Executing prompt engineering and fine-tuning experiments to optimize generative outputs.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="relative pl-8 md:pl-12 group">
+                    <span class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-gray-400 group-hover:bg-primary transition ring-4 ring-white dark:ring-slate-900"></span>
+                    <div class="bg-white dark:bg-slate-800 p-6 rounded-xl shadow-md hover:shadow-xl transition border border-gray-100 dark:border-slate-700">
+                        <div class="flex flex-col md:flex-row md:justify-between mb-2">
+                            <h3 class="text-xl font-bold text-gray-800 dark:text-white">Cloud & NLP Engineer Intern</h3>
+                            <span class="text-sm text-gray-500 font-semibold bg-gray-100 dark:bg-slate-900 px-3 py-1 rounded-full w-fit">Feb 2025 - Aug 2025</span>
+                        </div>
+                        <p class="text-gray-500 dark:text-gray-400 mb-4">National Telecommunication Institute (NTI) | On-Site</p>
+                        <ul class="list-disc list-outside ml-4 text-gray-600 dark:text-gray-300 space-y-2">
+                            <li>Managed cloud infrastructure for 10+ web apps via AWS (EC2, Lambda, S3) and Kubernetes.</li>
+                            <li>Automated deployments using Terraform, reducing manual overhead.</li>
+                            <li>Optimized performance with Prometheus/Grafana (25% engagement increase).</li>
+                            <li>Integrated AI models into CI/CD pipelines (MLOps).</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="relative pl-8 md:pl-12 group">
+                    <span class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-gray-400 group-hover:bg-primary transition ring-4 ring-white dark:ring-slate-900"></span>
+                    <div class="bg-white dark:bg-slate-800 p-6 rounded-xl shadow-md hover:shadow-xl transition border border-gray-100 dark:border-slate-700">
+                        <div class="flex flex-col md:flex-row md:justify-between mb-2">
+                            <h3 class="text-xl font-bold text-gray-800 dark:text-white">Full Stack Developer Intern</h3>
+                            <span class="text-sm text-gray-500 font-semibold bg-gray-100 dark:bg-slate-900 px-3 py-1 rounded-full w-fit">Jul 2024 - Aug 2024</span>
+                        </div>
+                        <p class="text-gray-500 dark:text-gray-400 mb-4">Information Technology Institute (ITI) | Remote</p>
+                        <ul class="list-disc list-outside ml-4 text-gray-600 dark:text-gray-300 space-y-2">
+                            <li>Improved task management performance by 40% through DB query optimization.</li>
+                            <li>Designed scalable architectures that accelerated deployment speeds by 50%.</li>
+                            <li>Reduced API response times by 25%, enhancing user experience.</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="py-20 bg-gray-50 dark:bg-slate-800">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold mb-12 text-center">Featured Projects</h2>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <div class="bg-white dark:bg-slate-900 rounded-xl overflow-hidden shadow-lg hover:-translate-y-2 transition duration-300 flex flex-col">
+                    <div class="h-40 bg-gradient-to-r from-indigo-500 to-blue-500 flex items-center justify-center">
+                        <i class="fas fa-newspaper text-5xl text-white opacity-80"></i>
+                    </div>
+                    <div class="p-6 flex-grow">
+                        <h3 class="text-xl font-bold mb-2">AI-Powered News Classification</h3>
+                        <p class="text-sm text-gray-500 dark:text-gray-400 mb-4">NLP • BERT • Flask • AWS</p>
+                        <p class="text-gray-600 dark:text-gray-300 text-sm mb-4">
+                            Developed an NLP model to classify fake vs. real news using AraBERT/BERT. Deployed on AWS with an interactive Flask web app.
+                        </p>
+                    </div>
+                    <div class="px-6 pb-6 pt-0">
+                        <a href="#" class="text-primary text-sm font-semibold hover:underline">View Details <i class="fas fa-arrow-right ml-1"></i></a>
+                    </div>
+                </div>
+
+                <div class="bg-white dark:bg-slate-900 rounded-xl overflow-hidden shadow-lg hover:-translate-y-2 transition duration-300 flex flex-col">
+                    <div class="h-40 bg-gradient-to-r from-emerald-500 to-green-500 flex items-center justify-center">
+                        <i class="fas fa-shopping-cart text-5xl text-white opacity-80"></i>
+                    </div>
+                    <div class="p-6 flex-grow">
+                        <h3 class="text-xl font-bold mb-2">E-Commerce Platform</h3>
+                        <p class="text-sm text-gray-500 dark:text-gray-400 mb-4">Django • React • Stripe • PostgreSQL</p>
+                        <p class="text-gray-600 dark:text-gray-300 text-sm mb-4">
+                            Full-featured platform with shopping cart, user auth, and Stripe integration. Backend in Django, Frontend in React + Bootstrap.
+                        </p>
+                    </div>
+                    <div class="px-6 pb-6 pt-0">
+                        <a href="#" class="text-primary text-sm font-semibold hover:underline">View Details <i class="fas fa-arrow-right ml-1"></i></a>
+                    </div>
+                </div>
+
+                <div class="bg-white dark:bg-slate-900 rounded-xl overflow-hidden shadow-lg hover:-translate-y-2 transition duration-300 flex flex-col">
+                    <div class="h-40 bg-gradient-to-r from-pink-500 to-rose-500 flex items-center justify-center">
+                        <i class="fas fa-magic text-5xl text-white opacity-80"></i>
+                    </div>
+                    <div class="p-6 flex-grow">
+                        <h3 class="text-xl font-bold mb-2">AI Recommendation Engine</h3>
+                        <p class="text-sm text-gray-500 dark:text-gray-400 mb-4">Deep Learning • Collaborative Filtering</p>
+                        <p class="text-gray-600 dark:text-gray-300 text-sm mb-4">
+                            Built a system for e-commerce platforms using collaborative filtering & deep learning to improve product discovery.
+                        </p>
+                    </div>
+                    <div class="px-6 pb-6 pt-0">
+                        <a href="#" class="text-primary text-sm font-semibold hover:underline">View Details <i class="fas fa-arrow-right ml-1"></i></a>
+                    </div>
+                </div>
+
+                <div class="bg-white dark:bg-slate-900 rounded-xl overflow-hidden shadow-lg hover:-translate-y-2 transition duration-300 flex flex-col">
+                    <div class="h-40 bg-gradient-to-r from-amber-500 to-orange-500 flex items-center justify-center">
+                        <i class="fas fa-smile text-5xl text-white opacity-80"></i>
+                    </div>
+                    <div class="p-6 flex-grow">
+                        <h3 class="text-xl font-bold mb-2">Sentiment Analysis Tool</h3>
+                        <p class="text-sm text-gray-500 dark:text-gray-400 mb-4">Docker • AWS Lambda • Transformers</p>
+                        <p class="text-gray-600 dark:text-gray-300 text-sm mb-4">
+                            End-to-end sentiment analysis for Arabic/English text. Fine-tuned models deployed with Docker and AWS Lambda.
+                        </p>
+                    </div>
+                    <div class="px-6 pb-6 pt-0">
+                        <a href="#" class="text-primary text-sm font-semibold hover:underline">View Details <i class="fas fa-arrow-right ml-1"></i></a>
+                    </div>
+                </div>
+                 <div class="bg-white dark:bg-slate-900 rounded-xl overflow-hidden shadow-lg hover:-translate-y-2 transition duration-300 flex flex-col">
+                    <div class="h-40 bg-gradient-to-r from-cyan-500 to-blue-500 flex items-center justify-center">
+                        <i class="fas fa-tasks text-5xl text-white opacity-80"></i>
+                    </div>
+                    <div class="p-6 flex-grow">
+                        <h3 class="text-xl font-bold mb-2">Task Management System</h3>
+                        <p class="text-sm text-gray-500 dark:text-gray-400 mb-4">Django REST • Responsive Web</p>
+                        <p class="text-gray-600 dark:text-gray-300 text-sm mb-4">
+                            Web application for task creation, deadlines, and collaboration. Integrated REST APIs ensuring responsive performance.
+                        </p>
+                    </div>
+                    <div class="px-6 pb-6 pt-0">
+                        <a href="#" class="text-primary text-sm font-semibold hover:underline">View Details <i class="fas fa-arrow-right ml-1"></i></a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="py-20">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold mb-12 text-center">Technical Skills</h2>
+            
+            <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                
+                <div>
+                    <h3 class="text-xl font-semibold mb-4 flex items-center"><i class="fas fa-brain text-primary mr-2"></i> AI & Machine Learning</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-primary dark:text-blue-200 rounded-full text-sm">Generative AI</span>
+                        <span class="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-primary dark:text-blue-200 rounded-full text-sm">NLP</span>
+                        <span class="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-primary dark:text-blue-200 rounded-full text-sm">Transformer Models</span>
+                        <span class="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-primary dark:text-blue-200 rounded-full text-sm">Prompt Engineering</span>
+                        <span class="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-primary dark:text-blue-200 rounded-full text-sm">Model Fine Tuning</span>
+                        <span class="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-primary dark:text-blue-200 rounded-full text-sm">Text Classification</span>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 class="text-xl font-semibold mb-4 flex items-center"><i class="fas fa-cloud text-primary mr-2"></i> Web & Cloud</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-green-100 dark:bg-green-900 text-green-700 dark:text-green-200 rounded-full text-sm">AWS (EC2, Lambda, S3)</span>
+                        <span class="px-3 py-1 bg-green-100 dark:bg-green-900 text-green-700 dark:text-green-200 rounded-full text-sm">Docker</span>
+                        <span class="px-3 py-1 bg-green-100 dark:bg-green-900 text-green-700 dark:text-green-200 rounded-full text-sm">Kubernetes</span>
+                        <span class="px-3 py-1 bg-green-100 dark:bg-green-900 text-green-700 dark:text-green-200 rounded-full text-sm">Django</span>
+                        <span class="px-3 py-1 bg-green-100 dark:bg-green-900 text-green-700 dark:text-green-200 rounded-full text-sm">React + Bootstrap</span>
+                        <span class="px-3 py-1 bg-green-100 dark:bg-green-900 text-green-700 dark:text-green-200 rounded-full text-sm">CI/CD & Terraform</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 bg-gray-50 dark:bg-slate-800">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold mb-12 text-center">Certifications</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="bg-white dark:bg-slate-900 p-6 rounded-lg shadow-sm border-l-4 border-accent">
+                    <h4 class="font-bold">Machine Learning Specialization</h4>
+                    <p class="text-sm text-gray-500 mt-1">Stanford University (2025)</p>
+                </div>
+                <div class="bg-white dark:bg-slate-900 p-6 rounded-lg shadow-sm border-l-4 border-accent">
+                    <h4 class="font-bold">IBM Machine Learning Specialization</h4>
+                    <p class="text-sm text-gray-500 mt-1">IBM (2025)</p>
+                </div>
+                <div class="bg-white dark:bg-slate-900 p-6 rounded-lg shadow-sm border-l-4 border-accent">
+                    <h4 class="font-bold">ALX AI Career Essentials</h4>
+                    <p class="text-sm text-gray-500 mt-1">ALX (2024)</p>
+                </div>
+                <div class="bg-white dark:bg-slate-900 p-6 rounded-lg shadow-sm border-l-4 border-accent">
+                    <h4 class="font-bold">Full Stack Python</h4>
+                    <p class="text-sm text-gray-500 mt-1">ITI (2024)</p>
+                </div>
+                <div class="bg-white dark:bg-slate-900 p-6 rounded-lg shadow-sm border-l-4 border-accent">
+                    <h4 class="font-bold">Huawei HCIA V3.0 (AI)</h4>
+                    <p class="text-sm text-gray-500 mt-1">NTI (2025)</p>
+                </div>
+                <div class="bg-white dark:bg-slate-900 p-6 rounded-lg shadow-sm border-l-4 border-accent">
+                    <h4 class="font-bold">NLP Course</h4>
+                    <p class="text-sm text-gray-500 mt-1">NTI (2025)</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-20">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl font-bold mb-8">Let's Work Together</h2>
+            <p class="text-gray-600 dark:text-gray-300 max-w-xl mx-auto mb-10">
+                I am currently open to full-time opportunities in AI, NLP, and Full Stack Engineering. Feel free to reach out!
+            </p>
+            
+            <div class="flex flex-col md:flex-row justify-center gap-8 mb-12">
+                <div class="flex items-center justify-center gap-3">
+                    <div class="w-12 h-12 bg-blue-100 dark:bg-slate-800 rounded-full flex items-center justify-center text-primary">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <div class="text-left">
+                        <p class="text-sm text-gray-500">Email</p>
+                        <a href="mailto:akrammichael10@gmail.com" class="font-semibold hover:text-primary">akrammichael10@gmail.com</a>
+                    </div>
+                </div>
+                
+                <div class="flex items-center justify-center gap-3">
+                    <div class="w-12 h-12 bg-blue-100 dark:bg-slate-800 rounded-full flex items-center justify-center text-primary">
+                        <i class="fas fa-phone"></i>
+                    </div>
+                    <div class="text-left">
+                        <p class="text-sm text-gray-500">Phone</p>
+                        <a href="tel:01289390073" class="font-semibold hover:text-primary">01289390073</a>
+                    </div>
+                </div>
+            </div>
+
+            <a href="Michael_Akram_CV.pdf" download class="inline-block px-8 py-3 bg-slate-800 dark:bg-white dark:text-slate-900 text-white rounded-lg font-semibold hover:bg-slate-700 transition">
+                <i class="fas fa-download mr-2"></i> Download Resume
+            </a>
+        </div>
+    </section>
+
+    <footer class="bg-slate-900 text-white py-8 border-t border-slate-800">
+        <div class="container mx-auto px-6 flex flex-col md:flex-row justify-between items-center">
+            <p class="text-sm text-gray-400">© 2026 Michael Akram. All rights reserved.</p>
+            <div class="flex space-x-6 mt-4 md:mt-0">
+                <a href="https://github.com/michaelakram10" class="hover:text-primary transition"><i class="fab fa-github"></i></a>
+                <a href="https://linkedin.com/in/michael-akram-n/" class="hover:text-primary transition"><i class="fab fa-linkedin"></i></a>
+            </div>
         </div>
     </footer>
 
+    <script>
+        // Theme Toggle
+        const themeToggleBtn = document.getElementById('theme-toggle');
+        const htmlElement = document.documentElement;
+
+        themeToggleBtn.addEventListener('click', () => {
+            htmlElement.classList.toggle('dark');
+            localStorage.setItem('theme', htmlElement.classList.contains('dark') ? 'dark' : 'light');
+        });
+
+        if (localStorage.getItem('theme') === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            htmlElement.classList.add('dark');
+        } else {
+            htmlElement.classList.remove('dark');
+        }
+
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Typewriter Effect
+        const textElement = document.getElementById('typewriter');
+        const phrases = ["AI Engineer.", "Generative AI Specialist.", "Full Stack Developer."];
+        let phraseIndex = 0;
+        let charIndex = 0;
+        let isDeleting = false;
+
+        function type() {
+            const currentPhrase = phrases[phraseIndex];
+            
+            if (isDeleting) {
+                textElement.textContent = currentPhrase.substring(0, charIndex - 1);
+                charIndex--;
+            } else {
+                textElement.textContent = currentPhrase.substring(0, charIndex + 1);
+                charIndex++;
+            }
+
+            if (!isDeleting && charIndex === currentPhrase.length) {
+                isDeleting = true;
+                setTimeout(type, 2000);
+            } else if (isDeleting && charIndex === 0) {
+                isDeleting = false;
+                phraseIndex = (phraseIndex + 1) % phrases.length;
+                setTimeout(type, 500);
+            } else {
+                setTimeout(type, isDeleting ? 100 : 100);
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', type);
+    </script>
 </body>
 </html>
