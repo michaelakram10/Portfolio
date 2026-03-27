@@ -20,22 +20,20 @@
                 },
                 extend: {
                     colors: {
-                        primary: '#3B82F6', // Blue
-                        secondary: '#1E293B', // Dark Slate
-                        accent: '#10B981', // Emerald
+                        primary: '#3B82F6',
+                        secondary: '#1E293B',
+                        accent: '#10B981',
                     }
                 }
             }
         }
     </script>
     <style>
-        /* Custom Scrollbar */
         ::-webkit-scrollbar { width: 8px; }
         ::-webkit-scrollbar-track { background: #f1f1f1; }
         ::-webkit-scrollbar-thumb { background: #888; border-radius: 5px; }
         ::-webkit-scrollbar-thumb:hover { background: #555; }
 
-        /* Scroll Progress Bar */
         #progressBar {
             position: fixed;
             top: 0;
@@ -47,7 +45,6 @@
             transition: width 0.1s;
         }
 
-        /* Scroll Reveal Animation */
         .reveal {
             opacity: 0;
             transform: translateY(30px);
@@ -58,7 +55,6 @@
             transform: translateY(0);
         }
 
-        /* Background Blobs */
         .blob {
             position: absolute;
             filter: blur(40px);
@@ -71,7 +67,6 @@
             to { transform: translate(20px, -20px) scale(1.1); }
         }
 
-        /* Modals */
         .modal {
             display: none;
             position: fixed;
@@ -96,7 +91,6 @@
         .modal.show .modal-content {
             transform: scale(1);
         }
-        /* Dark mode for modal */
         .dark .modal-content {
             background: #1e293b;
             color: #f3f4f6;
@@ -115,6 +109,7 @@
             <div class="hidden md:flex space-x-8">
                 <a href="#home" class="hover:text-primary transition">Home</a>
                 <a href="#about" class="hover:text-primary transition">About</a>
+                <a href="#services" class="hover:text-primary transition">Services</a>
                 <a href="#experience" class="hover:text-primary transition">Experience</a>
                 <a href="#projects" class="hover:text-primary transition">Projects</a>
                 <a href="#skills" class="hover:text-primary transition">Skills</a>
@@ -141,6 +136,7 @@
         </div>
     </nav>
 
+    <!-- Hero -->
     <section id="home" class="min-h-screen flex items-center justify-center relative overflow-hidden pt-20">
         <div class="blob bg-purple-400 w-64 h-64 rounded-full top-20 left-20"></div>
         <div class="blob bg-blue-400 w-72 h-72 rounded-full bottom-20 right-20 animation-delay-2000"></div>
@@ -175,19 +171,38 @@
         </div>
     </section>
 
+    <!-- About -->
     <section id="about" class="py-20 bg-white dark:bg-slate-800 reveal">
         <div class="container mx-auto px-6">
             <div class="flex flex-col md:flex-row gap-12 items-center">
-                <div class="md:w-1/2 relative">
-                    <div class="w-full h-80 bg-gradient-to-tr from-blue-500 to-purple-600 rounded-2xl rotate-3 absolute -z-10 opacity-70"></div>
-                    <div class="w-full h-80 bg-gray-200 dark:bg-slate-700 rounded-2xl flex items-center justify-center text-gray-400 shadow-xl overflow-hidden">
-                       <i class="fas fa-user-astronaut text-6xl"></i>
+
+                <!-- LEFT: Photo -->
+                <div class="md:w-1/2 flex justify-center">
+                    <div class="relative w-72 md:w-80">
+                        <!-- Decorative gradient behind photo -->
+                        <div class="absolute inset-0 bg-gradient-to-tr from-blue-500 to-purple-600 rounded-2xl rotate-3 opacity-70 -z-10"></div>
+                        <!-- Photo frame -->
+                        <div class="relative rounded-2xl overflow-hidden shadow-2xl border-4 border-white dark:border-slate-700">
+                            <img
+                                src="images/WhatsApp Image 2024-06-06 at 10.55.49_ac9b9248.jpg"
+                                alt="Michael Akram"
+                                class="w-full h-full object-cover object-top transform hover:scale-105 transition duration-500"
+                                style="min-height: 340px;"
+                            >
+                        </div>
+                        <!-- Experience Badge -->
+                        <div class="absolute -bottom-5 -right-5 bg-white dark:bg-slate-800 p-4 rounded-xl shadow-xl z-20 border border-gray-100 dark:border-slate-700">
+                            <p class="text-primary font-bold text-2xl leading-none">2+</p>
+                            <p class="text-xs text-gray-500 uppercase tracking-wider mt-1">Years Experience</p>
+                        </div>
                     </div>
                 </div>
+
+                <!-- RIGHT: Text -->
                 <div class="md:w-1/2">
                     <h2 class="text-3xl font-bold mb-6 border-l-4 border-primary pl-4">About Me</h2>
                     <p class="text-gray-600 dark:text-gray-300 mb-4 leading-relaxed">
-                        I am an AI & Machine Learning Engineer with a BA in Smart Systems Engineering from Helwan National University (GPA 3.58). My passion lies in bridging the gap between advanced research and practical application.
+                        I am an AI &amp; Machine Learning Engineer with a BA in Smart Systems Engineering from Helwan National University (GPA 3.58). My passion lies in bridging the gap between advanced research and practical application.
                     </p>
                     <p class="text-gray-600 dark:text-gray-300 mb-6 leading-relaxed">
                         With hands-on experience in NLP, Deep Learning, and Full Stack Web Development, I specialize in designing and deploying transformer-based models and MLOps workflows using AWS and Docker.
@@ -203,10 +218,54 @@
                         </div>
                     </div>
                 </div>
+
             </div>
         </div>
     </section>
 
+    <!-- Services -->
+    <section id="services" class="py-20 bg-gray-50 dark:bg-slate-900 reveal">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold mb-4">Services &amp; Solutions</h2>
+                <div class="w-20 h-1 bg-primary mx-auto"></div>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white dark:bg-slate-800 p-8 rounded-2xl shadow-sm hover:shadow-xl transition-all border border-transparent hover:border-primary/30 group">
+                    <div class="w-14 h-14 bg-blue-100 dark:bg-blue-900/30 rounded-lg flex items-center justify-center mb-6 group-hover:bg-primary transition-colors">
+                        <i class="fas fa-robot text-primary text-2xl group-hover:text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Generative AI Solutions</h3>
+                    <p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">
+                        Building custom RAG pipelines, fine-tuning LLMs, and implementing agentic workflows to automate complex business logic.
+                    </p>
+                </div>
+
+                <div class="bg-white dark:bg-slate-800 p-8 rounded-2xl shadow-sm hover:shadow-xl transition-all border border-transparent hover:border-primary/30 group">
+                    <div class="w-14 h-14 bg-emerald-100 dark:bg-emerald-900/30 rounded-lg flex items-center justify-center mb-6 group-hover:bg-accent transition-colors">
+                        <i class="fas fa-language text-accent text-2xl group-hover:text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Advanced NLP</h3>
+                    <p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">
+                        Specialized in sentiment analysis, named entity recognition (NER), and multilingual text classification using BERT and AraBERT.
+                    </p>
+                </div>
+
+                <div class="bg-white dark:bg-slate-800 p-8 rounded-2xl shadow-sm hover:shadow-xl transition-all border border-transparent hover:border-primary/30 group">
+                    <div class="w-14 h-14 bg-purple-100 dark:bg-purple-900/30 rounded-lg flex items-center justify-center mb-6 group-hover:bg-purple-500 transition-colors">
+                        <i class="fas fa-code text-purple-500 text-2xl group-hover:text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Full-Stack AI Apps</h3>
+                    <p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">
+                        Developing scalable web platforms that seamlessly integrate AI models with React frontends and Django/Flask backends.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience -->
     <section id="experience" class="py-20 reveal">
         <div class="container mx-auto px-6">
             <h2 class="text-3xl font-bold mb-12 text-center">Work Experience</h2>
@@ -232,7 +291,7 @@
                     <span class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-gray-400 group-hover:bg-primary transition ring-4 ring-white dark:ring-slate-900"></span>
                     <div class="bg-white dark:bg-slate-800 p-6 rounded-xl shadow-md border border-gray-100 dark:border-slate-700">
                         <div class="flex flex-col md:flex-row md:justify-between mb-2">
-                            <h3 class="text-xl font-bold dark:text-white">Cloud & NLP Engineer Intern</h3>
+                            <h3 class="text-xl font-bold dark:text-white">Cloud &amp; NLP Engineer Intern</h3>
                             <span class="text-sm text-gray-500 font-semibold bg-gray-100 dark:bg-slate-900 px-3 py-1 rounded-full w-fit">Feb 2025 - Aug 2025</span>
                         </div>
                         <p class="text-gray-500 mb-4">National Telecommunication Institute (NTI) | On-Site</p>
@@ -262,6 +321,7 @@
         </div>
     </section>
 
+    <!-- Projects -->
     <section id="projects" class="py-20 bg-gray-50 dark:bg-slate-800 reveal">
         <div class="container mx-auto px-6">
             <h2 class="text-3xl font-bold mb-12 text-center">Featured Projects</h2>
@@ -337,32 +397,34 @@
         </div>
     </section>
 
+    <!-- Skills -->
     <section id="skills" class="py-20 reveal">
         <div class="container mx-auto px-6">
             <h2 class="text-3xl font-bold mb-12 text-center">Technical Skills</h2>
             <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
                 <div>
-                    <h3 class="text-xl font-semibold mb-4 flex items-center"><i class="fas fa-brain text-primary mr-2"></i> AI & ML</h3>
+                    <h3 class="text-xl font-semibold mb-4 flex items-center"><i class="fas fa-brain text-primary mr-2"></i> AI &amp; ML</h3>
                     <div class="flex flex-wrap gap-2">
-                        <span class="skill-pill bg-blue-100 dark:bg-blue-900 text-primary dark:text-blue-200 px-3 py-1 rounded-full text-sm">Generative AI</span>
-                        <span class="skill-pill bg-blue-100 dark:bg-blue-900 text-primary dark:text-blue-200 px-3 py-1 rounded-full text-sm">NLP</span>
-                        <span class="skill-pill bg-blue-100 dark:bg-blue-900 text-primary dark:text-blue-200 px-3 py-1 rounded-full text-sm">Transformers</span>
-                        <span class="skill-pill bg-blue-100 dark:bg-blue-900 text-primary dark:text-blue-200 px-3 py-1 rounded-full text-sm">PyTorch/TensorFlow</span>
+                        <span class="bg-blue-100 dark:bg-blue-900 text-primary dark:text-blue-200 px-3 py-1 rounded-full text-sm">Generative AI</span>
+                        <span class="bg-blue-100 dark:bg-blue-900 text-primary dark:text-blue-200 px-3 py-1 rounded-full text-sm">NLP</span>
+                        <span class="bg-blue-100 dark:bg-blue-900 text-primary dark:text-blue-200 px-3 py-1 rounded-full text-sm">Transformers</span>
+                        <span class="bg-blue-100 dark:bg-blue-900 text-primary dark:text-blue-200 px-3 py-1 rounded-full text-sm">PyTorch/TensorFlow</span>
                     </div>
                 </div>
                 <div>
-                    <h3 class="text-xl font-semibold mb-4 flex items-center"><i class="fas fa-cloud text-primary mr-2"></i> Web & Cloud</h3>
+                    <h3 class="text-xl font-semibold mb-4 flex items-center"><i class="fas fa-cloud text-primary mr-2"></i> Web &amp; Cloud</h3>
                     <div class="flex flex-wrap gap-2">
-                        <span class="skill-pill bg-green-100 dark:bg-green-900 text-green-700 dark:text-green-200 px-3 py-1 rounded-full text-sm">AWS</span>
-                        <span class="skill-pill bg-green-100 dark:bg-green-900 text-green-700 dark:text-green-200 px-3 py-1 rounded-full text-sm">Docker</span>
-                        <span class="skill-pill bg-green-100 dark:bg-green-900 text-green-700 dark:text-green-200 px-3 py-1 rounded-full text-sm">Kubernetes</span>
-                        <span class="skill-pill bg-green-100 dark:bg-green-900 text-green-700 dark:text-green-200 px-3 py-1 rounded-full text-sm">Django</span>
+                        <span class="bg-green-100 dark:bg-green-900 text-green-700 dark:text-green-200 px-3 py-1 rounded-full text-sm">AWS</span>
+                        <span class="bg-green-100 dark:bg-green-900 text-green-700 dark:text-green-200 px-3 py-1 rounded-full text-sm">Docker</span>
+                        <span class="bg-green-100 dark:bg-green-900 text-green-700 dark:text-green-200 px-3 py-1 rounded-full text-sm">Kubernetes</span>
+                        <span class="bg-green-100 dark:bg-green-900 text-green-700 dark:text-green-200 px-3 py-1 rounded-full text-sm">Django</span>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- Certifications -->
     <section class="py-20 bg-gray-50 dark:bg-slate-800 reveal">
         <div class="container mx-auto px-6">
             <h2 class="text-3xl font-bold mb-12 text-center">Certifications</h2>
@@ -383,6 +445,7 @@
         </div>
     </section>
 
+    <!-- Contact -->
     <section id="contact" class="py-20 reveal">
         <div class="container mx-auto px-6 text-center">
             <h2 class="text-3xl font-bold mb-8">Let's Work Together</h2>
@@ -405,6 +468,7 @@
         </div>
     </section>
 
+    <!-- Footer -->
     <footer class="bg-slate-900 text-white py-8 border-t border-slate-800">
         <div class="container mx-auto px-6 text-center md:text-left md:flex justify-between items-center">
             <p class="text-sm text-gray-400">© 2026 Michael Akram.</p>
@@ -415,10 +479,12 @@
         </div>
     </footer>
 
+    <!-- Back to Top -->
     <button id="topBtn" class="fixed bottom-6 right-6 bg-primary text-white p-3 rounded-full hidden shadow-lg hover:bg-blue-600 transition z-40">
         <i class="fas fa-arrow-up"></i>
     </button>
 
+    <!-- Modals -->
     <div id="modal-news" class="modal">
         <div class="modal-content">
             <h2 class="font-bold text-2xl mb-4 text-primary">AI News Classification</h2>
@@ -457,7 +523,7 @@
         <div class="modal-content">
             <h2 class="font-bold text-2xl mb-4 text-primary">Recommendation Engine</h2>
             <p class="mb-4 text-gray-600 dark:text-gray-300">
-                Built a recommendation system for e-commerce platforms using collaborative filtering & deep learning.
+                Built a recommendation system for e-commerce platforms using collaborative filtering &amp; deep learning.
             </p>
             <ul class="list-disc ml-5 mb-6 text-sm text-gray-600 dark:text-gray-400">
                 <li>Methods: Collaborative Filtering, Neural Collaborative Filtering.</li>
@@ -556,25 +622,21 @@
         const reveals = document.querySelectorAll(".reveal");
 
         window.addEventListener("scroll", () => {
-            // Progress Bar
             let scrollTop = window.scrollY;
             let docHeight = document.body.scrollHeight - window.innerHeight;
             let scrollPercent = (scrollTop / docHeight) * 100;
             progressBar.style.width = scrollPercent + "%";
 
-            // Back to Top Button
             if (scrollTop > 400) {
                 topBtn.classList.remove("hidden");
             } else {
                 topBtn.classList.add("hidden");
             }
 
-            // Scroll Reveal
             reveals.forEach(el => {
                 const windowHeight = window.innerHeight;
                 const elementTop = el.getBoundingClientRect().top;
-                const elementVisible = 100;
-                if (elementTop < windowHeight - elementVisible) {
+                if (elementTop < windowHeight - 100) {
                     el.classList.add("active");
                 }
             });
@@ -586,26 +648,19 @@
         function openModal(id) {
             const modal = document.getElementById(id);
             modal.style.display = "flex";
-            setTimeout(() => {
-                modal.classList.add("show");
-            }, 10);
+            setTimeout(() => modal.classList.add("show"), 10);
         }
 
         function closeModal(id) {
             const modal = document.getElementById(id);
             modal.classList.remove("show");
-            setTimeout(() => {
-                modal.style.display = "none";
-            }, 300);
+            setTimeout(() => { modal.style.display = "none"; }, 300);
         }
 
-        // Close modal when clicking outside
         window.onclick = function(event) {
             if (event.target.classList.contains('modal')) {
                 event.target.classList.remove("show");
-                setTimeout(() => {
-                    event.target.style.display = "none";
-                }, 300);
+                setTimeout(() => { event.target.style.display = "none"; }, 300);
             }
         }
     </script>
