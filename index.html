@@ -1353,19 +1353,6 @@ async function sendMessage() {
       })
     });
 
-    const data = await response.json();
-    removeTyping();
-
-    if (data.choices && data.choices[0]?.message?.content) {
-      const reply = data.choices[0].message.content;
-      addMsg('ai', reply);
-      chatHistory.push({ role: 'assistant', content: reply });
-    } else {
-      addMsg('ai', "Sorry, I couldn't get a response. Please try again!");
-    }
-  } catch (err) {
-    removeTyping();
-    addMsg('ai', "Connection error — please check back shortly.");
   } finally {
     isTyping = false;
     document.getElementById('chat-send').disabled = false;
